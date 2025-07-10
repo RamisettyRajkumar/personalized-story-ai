@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personalized Story Creator</title>
+</head>
+<body>
+    <h1>AI-Powered Personalized Story Creator</h1>
+    <form method="POST">
+        Your Name: <input type="text" name="name" required><br><br>
+        Favorite Thing: <input type="text" name="fav_thing" required><br><br>
+        Describe Your Mood (write a sentence): <input type="text" name="user_mood" required><br><br>
+        Choose Style: 
+        <select name="style">
+            <option value="funny">Funny</option>
+            <option value="scary">Scary</option>
+            <option value="romantic">Romantic</option>
+            <option value="adventure">Adventure</option>
+        </select><br><br>
+        <input type="submit" value="Generate Story">
+    </form>
+
+    {% if story %}
+        <h2>Your Personalized Story:</h2>
+        <p>{{ story }}</p>
+    {% endif %}
+</body>
+</html>
